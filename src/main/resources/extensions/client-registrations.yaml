@@ -48,3 +48,22 @@ spec:
   userInfoAuthenticationMethod: "header"
   userNameAttributeName: "username"
   clientName: "GitLab"
+---
+apiVersion: oauth.halo.run/v1alpha1
+kind: Oauth2ClientRegistration
+metadata:
+  name: logto
+spec:
+  clientAuthenticationMethod: "client_secret_basic"
+  authorizationGrantType: "authorization_code"
+  redirectUri: "{baseUrl}/login/oauth2/code/logto"
+  scopes:
+    - "openid"
+    - "profile"
+    - "email"
+  authorizationUri: "https://sso.a2008q.top/oidc/auth"
+  tokenUri: "https://sso.a2008q.top/oidc/token"
+  userInfoUri: "https://sso.a2008q.top/oidc/me"
+  userInfoAuthenticationMethod: "header"
+  userNameAttributeName: "username"
+  clientName: "Logto"
