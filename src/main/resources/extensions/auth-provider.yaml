@@ -77,4 +77,24 @@ spec:
     name: generic-oauth2-setting
     group: genericOauth
   configMapRef:
-    name: oauth2-gitlab-config
+    name: oauth2-logto-config
+---
+apiVersion: auth.halo.run/v1alpha1
+kind: AuthProvider
+metadata:
+  name: authing
+  labels:
+    auth.halo.run/auth-binding: "true"
+spec:
+  displayName: Authing
+  description: Authing quickly implements authentication and user management for any Web, App, and enterprise software to provide the most complete login solution for your customers and employees.
+  logo: /plugins/plugin-oauth2/assets/static/authing.svg
+  website: https://www.authing.cn
+  authenticationUrl: /oauth2/authorization/authing
+  bindingUrl: /apis/api.plugin.halo.run/v1alpha1/plugins/plugin-oauth2/connect/authing
+  unbindUrl: /apis/api.plugin.halo.run/v1alpha1/plugins/plugin-oauth2/disconnect/authing
+  settingRef:
+    name: generic-oauth2-setting
+    group: genericOauth
+  configMapRef:
+    name: oauth2-authing-config

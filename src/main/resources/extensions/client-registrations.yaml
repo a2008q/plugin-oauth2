@@ -64,6 +64,26 @@ spec:
   authorizationUri: "https://sso.a2008q.top/oidc/auth"
   tokenUri: "https://sso.a2008q.top/oidc/token"
   userInfoUri: "https://sso.a2008q.top/oidc/me"
+  jwkSetUri: "https://sso.a2008q.top/oidc/jwks"
   userInfoAuthenticationMethod: "header"
   userNameAttributeName: "username"
   clientName: "Logto"
+---
+apiVersion: oauth.halo.run/v1alpha1
+kind: Oauth2ClientRegistration
+metadata:
+  name: authing
+spec:
+  clientAuthenticationMethod: "client_secret_post"
+  authorizationGrantType: "authorization_code"
+  redirectUri: "{baseUrl}/login/oauth2/code/authing"
+  scopes:
+    - "openid"
+    - "username"
+  authorizationUri: "https://seeyonoa.authing.cn/oidc/auth"
+  tokenUri: "https://seeyonoa.authing.cn/oidc/token"
+  userInfoUri: "https://seeyonoa.authing.cn/oidc/me"
+  jwkSetUri: "https://seeyonoa.authing.cn/oidc/.well-known/jwks.json"
+  userInfoAuthenticationMethod: "header"
+  userNameAttributeName: "username"
+  clientName: "Authing"
