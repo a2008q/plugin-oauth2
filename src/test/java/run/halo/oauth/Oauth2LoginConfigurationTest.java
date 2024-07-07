@@ -5,6 +5,7 @@ import static org.mockito.Mockito.mock;
 
 import org.junit.jupiter.api.Test;
 import run.halo.app.extension.ReactiveExtensionClient;
+import run.halo.app.security.LoginHandlerEnhancer;
 
 /**
  * Tests for {@link Oauth2LoginConfiguration}.
