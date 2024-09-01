@@ -10,6 +10,6 @@ on:
 
 jobs:
   ci:
-    uses: halo-sigs/reusable-workflows/.github/workflows/plugin-ci.yaml@v1
+    uses: http://192.168.31.112:3000/actions/reusable-workflows/src/branch/v1/.github/workflows/plugin-ci.yaml@v1
     with:
       skip-node-setup: true
