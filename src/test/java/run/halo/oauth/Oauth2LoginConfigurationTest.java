@@ -20,7 +20,7 @@ class Oauth2LoginConfigurationTest {
         ReactiveExtensionClient extensionClient = mock(ReactiveExtensionClient.class);
         var loginHandlerEnhancer = mock(LoginHandlerEnhancer.class);
         Oauth2LoginConfiguration oauth2LoginConfiguration =
-                new Oauth2LoginConfiguration(extensionClient, loginHandlerEnhancer);
+            new Oauth2LoginConfiguration(extensionClient, loginHandlerEnhancer);
         assertNotNull(oauth2LoginConfiguration);
     }
 
